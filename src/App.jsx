@@ -1,12 +1,19 @@
 import { useEffect } from 'react';
-import { getMachines, getVillagers2 } from './services/promise-me';
-import { getVillagers } from './services/promise-me';
+import {
+  getMachines,
+  get20Machines,
+  getVillagers2,
+  getVillagers,
+  getFish,
+} from './services/promise-me';
 
 export default function App() {
   useEffect(() => {
     getVillagers2();
     getVillagers();
     getMachines();
+    get20Machines();
+    getFish();
   });
   return <h1>Hello World</h1>;
 }
